@@ -1,6 +1,7 @@
 # setuptools
-*.egg_info/
-dist/
+*.egg-info/*
+dist/*
+build/*
 
 # mac
 *.DS_Store
