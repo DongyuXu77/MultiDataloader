@@ -15,7 +15,7 @@ class NaiveDataloader(object):
         return self
 
     def __next__(self):
-        if not hasattr(cls, len):
+        if not hasattr(self, 'len'):
             self.__len__()
         if self.index >= self.len:
             raise StopIteration

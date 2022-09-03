@@ -1,5 +1,5 @@
-from loader import NaiveDataloader
-from dataset import TestDataset
+from loader.naive import NaiveDataloader
+from dataset.dataset import TestDataset
 def test():
     dataset = TestDataset(fake_len=100)
     dataloader = NaiveDataloader(dataset, batch_size=16)
