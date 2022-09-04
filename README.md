@@ -2,9 +2,9 @@ During the internship in ByteDance, I implement an independent Dataloader, which
 
 ## Installation
   1. Clone the repo.
-  2. Using the cd command go to the MultiDataloader folder.
-  3. Run 'sh distribute.sh' if you have installed setuptools before.
-  4. After installing successfully, you can go to the `test/` to run the 'test.py' *(The loader parameters are the same as PyTorch dataloader)*
+  2. Using the `cd` command go to the MultiDataloader folder.
+  3. Run `sh distribute.sh` if you have installed setuptools before.
+  4. After installing successfully, you can go to the `test/` to run the `test.py` *(The loader parameters are the same as PyTorch dataloader)*
  
  ## Results
    It's very difficult for me to get the accurate speed-up rate because it's hardware related, but it's for sure that the MultiDataloader boosts the loading speed.  
