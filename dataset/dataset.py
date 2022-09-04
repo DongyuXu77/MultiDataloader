@@ -1,3 +1,5 @@
+import time
+
 class TestDataset(object):
     def __init__(self, fake_len :int=10):
         self.len = fake_len
@@ -10,4 +12,5 @@ class TestDataset(object):
         """
         if isinstance(fake_index, int):
             fake_index = [fake_index]
+        time.sleep(0.01)
         return fake_index

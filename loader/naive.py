@@ -19,7 +19,7 @@ class NaiveDataloader(object):
             self.__len__()
         if self.index >= self.len:
             raise StopIteration
-        index_list = [item for item in range(self.index*self.batch_size, (self.index+1)*self.batch_size)]
+        index_list = [item for item in range(self.index*self.batch_size, min((self.index+1)*self.batch_size, len(self.dataset)))]
         data = self._get(index_list)
         self.index = self.index+1
         return data
