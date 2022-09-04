@@ -2,7 +2,7 @@ During the internship in ByteDance, I implement an independent Dataloader, which
 
 ## Installation
   1. Clone the repo.
-  2. Using the `cd` command go to the MultiDataloader folder.
+  2. Using the `cd` command go to the `MultiDataloader/` folder.
   3. Run `sh distribute.sh` if you have installed setuptools before.
   4. After installing successfully, you can go to the `test/` to run the `test.py` *(The loader parameters are the same as PyTorch dataloader)*
  
