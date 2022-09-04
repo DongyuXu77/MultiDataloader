@@ -10,5 +10,5 @@ During the internship in ByteDance, I implement an independent Dataloader, which
    It's very difficult for me to get the accurate speed-up rate because it's hardware related, but it's for sure that the MultiDataloader boosts the loading speed.  
    I roughly test on 10,000 fake data (It doesn't really load data, just sleep 0.01s), the batch_size set to 16, num_worker set to 8 for 10 times and get average in personal computer [MacBookPro2021 10cores]. The naive_dataloader spends 7.64146s and MultiDataloader spends 1.35452s, the speed-up rate is more than **5X**.
  
- ## Reference
-    The blog [DataLoaders Explained: Building a Multi-Process Data Loader from Scratch](https://teddykoker.com/2020/12/dataloader/) inspired me a lot at the beginning.
+ ## Reference  
+   The blog [DataLoaders Explained: Building a Multi-Process Data Loader from Scratch](https://teddykoker.com/2020/12/dataloader/) inspired me a lot at the beginning.
