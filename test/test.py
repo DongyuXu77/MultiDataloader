@@ -7,7 +7,7 @@ from loader.multi import MultiDataloader
 
 BATCH_SIZE = 16
 def train_with_naive(dataset, dataset_len):
-    dataloader_naive = NaiveDataloader(dataset, batch_size=BATCH_SIZE, drop_last=True)
+    dataloader_naive = NaiveDataloader(dataset, batch_size=BATCH_SIZE, drop_last=False)
     start_time = time.time()
     for _ in dataloader_naive:
         ...

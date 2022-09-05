@@ -6,6 +6,8 @@ from multiprocessing import Manager, Process, Queue
 from .naive import NaiveDataloader
 from .utils.function import worker_fn
 
+mp.set_start_method("fork") # Operating System related
+
 class MultiDataloader(NaiveDataloader):
     def __init__(self, dataset, batch_size: int, shuffle: bool=False, drop_last: bool=True, num_worker: int=1):
         super().__init__(dataset, batch_size, shuffle, drop_last)
@@ -24,10 +26,12 @@ class MultiDataloader(NaiveDataloader):
         times = self.len/self.num_worker
         if times!=int(times):
             times = math.ceil(times)
-        for time in range(int(times)):
+        for time in range(int(times)+1):
             for worker_id in range(self.num_worker):
                 index_pointer = time*self.num_worker*self.batch_size
                 self.index_queue[worker_id].put([l for l in range(index_pointer+worker_id*self.batch_size, min(index_pointer+(worker_id+1)*self.batch_size, len(self.dataset)))])
+                if len(self.dataset) < index_pointer+(worker_id+1)*self.batch_size:
+                    break
 
     def __next__(self):
         if not hasattr(self, 'len'):
