@@ -9,6 +9,4 @@ def worker_fn(dataset, index_queue, output_queue):
             index = index_queue.get(timeout=random.normal(loc=0.0, scale=0.5))
         except queue.Empty:
             continue
-        if index is None:
-            break
         output_queue.put(dataset[index])
