@@ -11,7 +11,7 @@ During the internship in ByteDance, I implement an independent Dataloader which 
    If $C_l \lt C_t$:  
    &ensp;&ensp; $T_M=C_l+C_t*n$ &emsp;&ensp;  $n$ is the training steps for each epoch &emsp; $M$ denotes for MultiDataloader  
    &ensp;&ensp; $T_N=(C_l+C_t)*n$ &ensp; $N$ denotes for NaiveDataloader  
-   &ensp;&ensp; $S_{rate} = \frac{T_N}{T_M} = \frac{(C_l+C_t)n}{C_l+nC_t}$ &emsp; $S_{rate}$ is the theoretical speed-up rate
+   &ensp;&ensp; $S_{rate} = \frac{T_N}{T_M} = \frac{(C_l+C_t)n}{C_l+C_tn}$ &emsp; $S_{rate}$ is the theoretical speed-up rate
     
  ## Experiments
    It's very difficult to get the accurate speed-up rate because it's hardware related, but it's for sure that the MultiDataloader boosts the loading speed.  
