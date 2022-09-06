@@ -1,4 +1,4 @@
-During the internship in ByteDance, I implement an independent Dataloader which can be used both in PyTorch, Tensorflow and other Deep Learning frameworks. The repo ***MultiDataloader*** is a toy demo to show the performance gap between different dataloaders *[NaiveDataloader, MultiDataloader, ...]*. It should be noticed that the code isn't the real implement, for example, the *shuffle* function doesn't implement in this repo.
+During the internship in ByteDance, I implement an independent Dataloader which can be used in PyTorch, Tensorflow and other Deep Learning frameworks. The repo ***MultiDataloader*** is a toy demo to show the performance gap between different dataloaders *[NaiveDataloader, MultiDataloader, ...]*. It should be noticed that the code isn't the real implement, for example, the *shuffle* function doesn't implement in this repo.
 
 ## Installation
   1. Clone the repo.
