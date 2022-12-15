@@ -1,6 +1,6 @@
 import math
-import queue
 import multiprocessing as mp
+import queue
 from multiprocessing import Manager, Process, Queue
 
 from .naive import NaiveDataloader
